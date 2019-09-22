@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {UserService} from './user.service';
+import {StorageService} from './storage.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Logistics';
+  title = 'LogisticApp';
+  constructor(private user: UserService, private storage: StorageService) {}
+  logout() {
+    this.user.logout();
+  }
 }
