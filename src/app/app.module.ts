@@ -15,6 +15,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {UserService} from './user.service';
 import {ProviderService} from './provider.service';
 import {StorageService} from './storage.service';
+import { ContactlistComponent } from './contacts/contactlist/contactlist.component';
+import { ContacteditComponent } from './contacts/contactedit/contactedit.component';
+import { ContactdetailComponent } from './contacts/contactdetail/contactdetail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import {StorageService} from './storage.service';
     ProviderlistComponent,
     ProviderdetailComponent,
     ProvidereditComponent,
-    UserComponent
+    UserComponent,
+    ContactlistComponent,
+    ContacteditComponent,
+    ContactdetailComponent,
   ],
   imports: [
     BrowserModule,

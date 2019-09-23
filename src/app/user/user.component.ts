@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class UserComponent implements OnInit {
   public loginForm;
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.loginForm = {
@@ -22,6 +22,7 @@ export class UserComponent implements OnInit {
   onSubmit() {
     console.log(this.loginForm);
     this.userService.login(this.loginForm);
+    this.router.navigate(['/home']);
   }
 
   onLogout() {

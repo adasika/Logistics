@@ -18,7 +18,7 @@ export class UserService {
         console.log(this.storage.getUser());
         this.storage.storeToken(data.token);
         console.log(this.storage.getToken());
-        this.router.navigate(['/provider']);
+        this.router.navigate(['/home']);
       },
       error => {
         console.error('Error!', error);
