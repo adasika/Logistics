@@ -1,1 +1,27 @@
 <h1>This is a home page</h1>
+
+<div class="navbar">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/provider">Provider</a>
+      </li>
+      <!--<li class="nav-item" *ngIf="!storage.getToken(); else elseBlock">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <ng-template #elseBlock>-->
+      <li class="nav-item">
+        <a class="nav-link" href= "" (click)="logout()">Logout</a>
+      </li>
+     <!-- </ng-template> -->
+    </ul>
+  </div>
+  
+  <!--content-->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <!--<app-employeeedit></app-employeeedit>-->
+  

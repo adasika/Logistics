@@ -9,9 +9,9 @@ import { ProviderdetailComponent } from './provider/providerdetail/providerdetai
 import { ProvidereditComponent } from './provider/provideredit/provideredit.component';
 
 const routes: Routes = [
+  { path: '', component: UserComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'login', component: UserComponent },
   // { path: 'employees/new', component: EmployeecreateComponent},
   { path: 'provider/:id', component: ProviderdetailComponent},
   { path: 'provider/:id/edit', component: ProvidereditComponent},
