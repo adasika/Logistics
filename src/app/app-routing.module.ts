@@ -7,12 +7,12 @@ import { UserComponent } from './user/user.component';
 import { ProviderlistComponent } from './provider/providerlist/providerlist.component';
 import { ProviderdetailComponent } from './provider/providerdetail/providerdetail.component';
 import { ProvidereditComponent } from './provider/provideredit/provideredit.component';
+import {ProvidercreateComponent} from './provider/providercreate/providercreate.component';
 
 const routes: Routes = [
   { path: '', component: UserComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  // { path: 'employees/new', component: EmployeecreateComponent},
   { path: 'provider/:id', component: ProviderdetailComponent},
   { path: 'provider/:id/edit', component: ProvidereditComponent},
   { path: 'provider',   component: ProviderlistComponent,
@@ -29,6 +29,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [ProviderlistComponent,
                                   ProviderdetailComponent,
+                                  ProvidercreateComponent,
                                   ProvidereditComponent,
                                   UserComponent,
                                   HomeComponent,
