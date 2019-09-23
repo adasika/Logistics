@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {ProviderService} from '../../provider.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
@@ -12,6 +12,8 @@ export class ProviderlistComponent implements OnInit {
   public providers = [];
   public errorMsg;
   constructor(private providerService: ProviderService, private router: Router, private route: ActivatedRoute) { }
+
+  @ViewChild('NavBar', {static:false})
 
   ngOnInit() {
     this.providerService.getProvider().subscribe(
