@@ -1,4 +1,20 @@
-<ng-container *ngTemplateOutlet='NavBar'></ng-container>
+<div class="navbar">
+  <ul class="nav">
+   <li class="nav-item">
+    <a class="nav-link" href="/home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/provider">Provider</a>
+  </li>
+  <!--<li class="nav-item" *ngIf="!storage.getToken(); else elseBlock">
+    <a class="nav-link" href="/login">Login</a>
+  </li>
+  <ng-template #elseBlock>-->
+  <li class="nav-item">
+    <a class="nav-link" href= "" (click)="logout()">Logout</a>
+  </li> 
+</ul>
+</div>
 <h2 [ngStyle]="{'text-align':'center', 'margin-bottom':'20px'}">Provider List</h2>
 <h3>{{errorMsg}}</h3>
 <table class="table table-striped">
